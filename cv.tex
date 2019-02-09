@@ -6,7 +6,7 @@
 \usepackage[export] { adjustbox } % right or left for images
 \usepackage[hidelinks] { hyperref } % hyperlinks
 \usepackage { sectsty } % section font
-\usepackage{mdframed}
+\usepackage { array } % C macro
 
 \geometry {
     a4paper,
@@ -17,34 +17,98 @@
 
 \pagestyle{fancy}
 \fancyhf{}
-\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0pt} % no bottom border for header
 
-\sectionfont{\fontsize{12}{15}\selectfont\underline}
+% macro to center and wrap text in table cell
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
+<<<<<<< HEAD
+% font size of a section
+\sectionfont{\fontsize{12}{15}\selectfont}
+
+% header
+=======
+>>>>>>> 39515e35bbb7543be5f9ee5f49ca601eb3b994c8
 \lhead { \small Bucharest,  \\ Romania  }
 \chead { \textbf{ \Large Mihai-Bogdan Vîlculescu } }
-\rhead { \small bogdan.vilculescu@gmail.com }
+\rhead { \small bogdan.vilculescu@gmail.com \\
+        \small Phone number }
 
+% main document
 \begin{document}
-
-    \begin{figure}[!htb]
-        
-            
+    % github and linkedin link-images
+    \begin{figure}[!htb]        
         \begin{minipage}{0.05\textwidth}
-        
-        \href{https://www.github.com/BogdanVM} {\includegraphics[width = 1cm, height = 1cm, right]{git2.png} }
-        
+            \href{https://www.github.com/BogdanVM} {\includegraphics[width = 1cm, height = 1cm, right]{git2.png} }
         \end{minipage}\hfill
+
         \begin{minipage}{0.15\textwidth}
             \href{https://www.linkedin.com/in/bogdan-vilculescu/} {
                 \includegraphics[width = .75cm, height = .75cm, right]{linkedin.png} 
             }
-        
         \end{minipage}
-    
     \end{figure}
     
-    \section{Work Experience }
+    % Experience Section
+    \section*{ Experience }
+        \setlength{\tabcolsep}{55pt}
+        \begin{tabular} {ccc}
+            \small\textit{\textbf{Volunteer}} 
+            & \small\textit{\textbf{Codette}} 
+            & \small\textit{\textbf{March 2018 - Present}}\\
+            \hline
+        \end{tabular}
 
+        \begin{itemize}
+            \item Codette is a NGO having as an objective the empowerment of women to pursue careers in technology.
+            \item As I empathize with the organisation's purpose, I joined in as a volunteer in March 2018, while in my first year at university.
+            \item During this time, my involvement included mainly assistance with organizing different events, supported by Codette, such as the Code For All Summit in 2018.
+        \end{itemize}
+
+        \setlength{\tabcolsep}{15pt}
+        \begin{tabular} {ccc}
+            \small\textit{\textbf{Tutor of Procedural Programming}} 
+            & \small\textit{\textbf{University of Bucharest}} 
+            & \small\textit{\textbf{November 2018 - January 2019}}\\
+            \hline
+        \end{tabular}
+
+        \begin{itemize}
+            \item Every year at my university, the student association organizes lessons for the first year students. The people who teach them are studying in the second year.
+            \item In 2018, I participated as a tutor of procedural programming. This involved teaching C language concepts and mainly helping younger students understand this subject.
+        \end{itemize}
+    
+    % Education Section
+    \section*{Education}
+        \begin{tabular} {cC{8cm}c}
+            \small\textit{\textbf{BS Degree}} 
+            & \small\textit{\textbf{Faculty of Mathematics and Computer Science, University of Bucharest}} 
+            & \small\textit{\textbf{October 2017 - June 2020}} (expected)\\
+            \hline
+        \end{tabular}
+
+        \begin{itemize}
+            \item Studied Algorithms, Programming Languages (C, C++, Java), Operating Systems, Web Technologies (Frontend).
+        \end{itemize}
+    
+    % Additional Experience Section
+    \section*{Additional Experience}
+        \begin{itemize}
+            \item \textbf{\textit{Google Digital Workshop - Java Training (November 2018 - February 2019):}} Attended the workshop where I learnt the basic concepts of the Java language (Inheritance, Threads, Reactive, ...). 
+        \end{itemize}
+    
+    % Languages and Technologies Section
+    \section*{Languages and Technologies}
+        \begin{itemize}
+            \item \textbf{\textit{Technologies:}} C, C++, C\#, Java, Git, HTML5, CSS3, JavaScript, Python3.
+            \item \textbf{\textit{Spoken languages:}} Romanian (native), English (professional proficiency) - Cambridge CAE, French (elementary proficiency).
+        \end{itemize}
+    
+    % Hobbies and Interests Section
+    \section*{Hobbies and Interests}
+        \begin{itemize}
+            \item Listening to music (heavy metal), Reading (science-fiction novels), Jogging, Swimming.
+            \item CODING.
+        \end{itemize}
 
 \end{document}
