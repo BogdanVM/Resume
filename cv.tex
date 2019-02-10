@@ -22,32 +22,26 @@
 % macro to center and wrap text in table cell
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
-<<<<<<< HEAD
 % font size of a section
 \sectionfont{\fontsize{12}{15}\selectfont}
 
 % header
-=======
->>>>>>> 39515e35bbb7543be5f9ee5f49ca601eb3b994c8
 \lhead { \small Bucharest,  \\ Romania  }
 \chead { \textbf{ \Large Mihai-Bogdan Vîlculescu } }
-\rhead { \small bogdan.vilculescu@gmail.com \\
+\rhead { \small Email \\
         \small Phone number }
 
+\lfoot { \href{https://www.linkedin.com/in/bogdan-vilculescu/} { \includegraphics[width = .75cm, height = .75cm, left]{linkedin.png} } }
+\cfoot { \textbf {1}}
 % main document
 \begin{document}
-    % github and linkedin link-images
+    
     \begin{figure}[!htb]        
         \begin{minipage}{0.05\textwidth}
             \href{https://www.github.com/BogdanVM} {\includegraphics[width = 1cm, height = 1cm, right]{git2.png} }
-        \end{minipage}\hfill
-
-        \begin{minipage}{0.15\textwidth}
-            \href{https://www.linkedin.com/in/bogdan-vilculescu/} {
-                \includegraphics[width = .75cm, height = .75cm, right]{linkedin.png} 
-            }
         \end{minipage}
     \end{figure}
+    
     
     % Experience Section
     \section*{ Experience }
@@ -110,5 +104,4 @@
             \item Listening to music (heavy metal), Reading (science-fiction novels), Jogging, Swimming.
             \item CODING.
         \end{itemize}
-
 \end{document}
