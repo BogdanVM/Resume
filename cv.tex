@@ -1,13 +1,14 @@
 \documentclass{article}
 
 \usepackage { fancyhdr } % headers and footers
-\usepackage[headsep = 2.25cm, headheight = 0cm] { geometry } % showframe, margins
+\usepackage[headsep = 2.75cm, headheight = 0cm] { geometry } % showframe, margins
 \usepackage { graphicx } % images
 \usepackage[export] { adjustbox } % right or left for images
 \usepackage[hidelinks] { hyperref } % hyperlinks
 \usepackage { sectsty } % section font
 \usepackage { array } % C macro
 \usepackage { tikz }
+\usepackage { multicol }
 
 \geometry {
     a4paper,
@@ -26,120 +27,105 @@
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
 % font size of a section
-\sectionfont{\fontsize{10}{15}\selectfont}
+\sectionfont{\fontsize{15}{15}\selectfont\centering}
 
 % header
 \lhead { \small Bucharest,  \\ Romania  }
 \chead { \textbf{ \Large Mihai-Bogdan Vîlculescu } }
 \rhead { 
     \href{https://www.github.com/BogdanVM} {\includegraphics[width = .80cm, height = .80cm, right]{git2.png} }    
-    \small email \\
-    \small nr_telefon }
+    \small bogdan.vilculescu@gmail.com \\
+    \small (+40)724073974 }
 
 \lfoot { \href{https://www.linkedin.com/in/bogdan-vilculescu/} { \includegraphics[width = .80cm, height = .80cm, left]{linkedin.png} } }
 
 % main document
 \begin{document}
     
+    \begin{multicols}{2}
+    
     % Experience Section
     \section*{ Experience }
-        \setlength{\tabcolsep}{65pt}
-        \begin{tabular} {ccL{3cm}}
-            \footnotesize\textit{\textbf{Volunteer}} 
-            & \footnotesize\textit{\textbf{Codette}} 
-            & \footnotesize\textit{\textbf{March 2018 - Present}}\\
-            \hline
-        \end{tabular}
-
+    \large \textit{- Jun 2021 - Present} - \textbf{\textit{Frontend Developer}} at \textbf{Beecoded}
+        \vspace{0.35cm}\\ \normalsize \indent During this time, I specialised in frontend development (\textbf{Angular, React, Ionic Framework})
+        \\ \indent This experience has also helped me develop my soft skills, as I was required from time to time to \textbf{interact with clients} and to \textbf{manage tight deadlines}.
+        \\ \indent I feel like the most improved skills from this period were:
         \begin{itemize}
-            \item \footnotesize Codette is a NGO having as an objective the empowerment of women to pursue careers in technology. As I empathize with the organisation's purpose, I joined in as a volunteer in March 2018, while in my first year at university. During this time, my involvement included mainly assistance with organizing different events, supported by Codette, such as the Code For All Summit in 2018.
+            \item Frontend JavaScript frameworks (Angular, React)
+            \item Time management
+            \item Communication skills
+            \item Project management
         \end{itemize}
-
-        \setlength{\tabcolsep}{20pt}
-        \begin{tabular} {C{5cm}L{5cm}C{3cm}}
-            \footnotesize\textit{\textbf{Tutor of Procedural Programming}} 
-            & \footnotesize\textit{\textbf{University of Bucharest}} 
-            & \footnotesize\textit{\textbf{November 2018 - January 2019}}\\
-            \hline
-        \end{tabular}
-
+        
+    \vspace{0.5cm}
+    \large \textit{- Aug 2020 - Jun 2021} - \textbf{\textit{Full Stack Developer}} at \textbf{Codesilk}
+        \vspace{0.35cm}\\ \normalsize \indent I worked on different web and mobile projects. During this time, I've worked with both backend and frontend technologies:
         \begin{itemize}
-            \item \footnotesize Every year at my university, the student association organizes lessons for the first year students. The people who teach them are studying in the second year. In 2018, I participated as a tutor of procedural programming. This involved teaching C language concepts and mainly helping younger students understand this subject.
+            \item Laravel / Node.js / Wordpress;
+            \item Angular / React
         \end{itemize}
-
-        \setlength{\tabcolsep}{45pt}
-        \begin{tabular} {ccC{3cm}}
-            \footnotesize\textit{\textbf{Tutor of OOP}} 
-            & \footnotesize\textit{\textbf{University of Bucharest}} 
-            & \footnotesize\textit{\textbf{February 2019 - Present}}\\
-            \hline
-        \end{tabular}
-
-        \begin{itemize}
-            \item \footnotesize During the second semester in my second year, I held tutorials for the students at Object Oriented Programming. The subject involved the basic concepts of OOP (Encapsulation, Inheritance, Polymorphism), illustrated in C++.
-        \end{itemize}
+    
+    % Volunteering Section
+    \section*{ Volunteering }
+        
+        \large \textit{- Mar 2018 - Jan 2020} - \textbf{\textit{Volunteer}} at \textbf{Codette}
+        \\ \\ \normalsize \indent As I empathize with the organisation's purpose (the empowerment of women to pursue careers in technology), I joined in as a volunteer in March 2018. My involvement consisted of providing assistance with organizing different events, supported by Codette, such as the Code For All Summit in 2018.
+        
+        \vspace{0.5cm}
+        \large \textit{- Nov 2018 - January 2019} - \textbf{\textit{Tutor of C}} at \textbf{University of Bucharest}
+        \vspace{0.35cm}\\  \normalsize \indent Tutoring consists of assisting first year students with a certain subject. In 2018, I participated as a tutor of C language, helping younger students understand this subject.
+        
+        \vspace{0.5cm}
+        \large \textit{- Feb 2019 - June 2019} - \textbf{\textit{Tutor of OOP}} at \textbf{University of Bucharest}
+        \vspace{0.35cm}\\  \normalsize \indent During the second semester, in 2019, I became tutor of OOP where I helped students with grasping the basic concepts of OOP (Encapsulation, Inheritance, Polymorphism), illustrated in C++.
+        
 
     % Education Section
     \section*{Education}
-        \begin{tabular} {lC{6cm}L{3cm}}
-            \footnotesize\textit{\textbf{BS Degree}} 
-            & \footnotesize\textit{\textbf{Faculty of Mathematics and Informatics, University of Bucharest}} 
-            & \footnotesize\textit{\textbf{October 2017 - June 2020}} (expected)\\
-            \hline
-        \end{tabular}
-
-        \begin{itemize}
-            \item \footnotesize Studied Algorithms, Programming Languages (C, C++, Java), Operating Systems, Web Technologies (Frontend).
-        \end{itemize}
+        \large \textit{- Oct 2017 - Jun 2020} - \textbf{\textit{BS Degree}} \\ \textbf{Faculty of Math and Comp Science, University of Bucharest}
+        \vspace{0.35cm}\\ \normalsize\indent Studied   Algorithms,   Programming   Languages   (C,   C++,Java), Operating Systems, Web Technologies (Frontend).
+        
 
     % Personal Projects
     \section*{Personal Projects}
-        \begin{itemize}
-            \item \footnotesize \textbf{\textit{La Vot:}} This is an old project of mine developed around 2015 while I was still in high school. It was meant to be a platform where officials could administrate upcoming elections and citizens could use their right and vote online. I started working on it to get familiar with web technologies and this turned out to be my first full stack project. \textbf{Technologies used:} HTML, CSS, PHP and JavaScript.
-            \item \textbf{\textit{BrioBAC:}} Created in 2017 during my last year at high school with a friend. It is a tool for high school students about to take the final exam at mathematics. It contains materials and tests to help with the understanding of the subject. There are 2 versions: PC and Android. \textbf{Technologies used (PC):} Visual C\#, SQL. \textbf{Technologies used (Android):} Java, XML, SQL, Php.
-        \end{itemize}
+        \textbf{\textit{- La Vot:}} \textbf{Technologies used:} HTML, CSS, PHP and JavaScript.
+        \vspace{0.35cm}\\ \textbf{\textit{- BrioBAC:}} \textbf{Technologies used (Android):} Java, XML,SQL, Php.
 
     % Additional Experience Section
     \section*{Additional Experience}
-        \begin{itemize}
-            \item \footnotesize \textbf{\textit{Google Digital Workshop - Java Training (November 2018 - February 2019):}} Attended the workshop where I learnt the basic concepts of the Java language (Inheritance, Threads, Reactive, ...);
-            \item \footnotesize \textbf{\textit{Google Digital Workshop - Android Advanced Training (March 2019 - Present)}};
-            \item \textbf{\textit{Pedagogical Module(October 2018 - Present):}} Attended the pedagogical module held at our univeristy for people who wanted to become teachers. I do not necessarily intend to pursue a career in teaching, but I believe this is a great opportunity to learn and explore new things. 
-        \end{itemize}
+        \textbf{\textit{- Google Digital Workshop - Java Training (November 2018 - February 2019)}}
+        \vspace{0.35cm}\\ \textbf{\textit{- Google Digital Workshop - Android Advanced Training (March 2019 - June 2019)}};
+        \vspace{0.35cm}\\ \textbf{\textit{- Pedagogical Module(October 2018 - Jun 2020):}} Attended the pedagogical module held at our univeristy for people who wanted to become teachers. I do not necessarily intend to pursue a career in teaching, but I believe this is a great opportunity to learn and explore new things. 
     
     % Languages and Technologies Section
     \section*{Languages and Technologies}
+        \begin{multicols}{2}
         \begin{itemize}
             \item[] \scriptsize 
                 \begin{tikzpicture}
-                    \node [anchor=west] at (.1,.65) {C\#};
+                    \node [anchor=west] at (.1,.65) {Javascript};
                     \draw [fill=gray] (0,0) rectangle (2.5,.35);
-                    \draw [fill={rgb:red,0;green,1;blue,0}] (0,0) rectangle (1.85, .35);
+                    \draw [fill={rgb:red,0;green,1;blue,0}] (0,0) rectangle (2.3, .35);
                 \end{tikzpicture}
                 \begin{tikzpicture}
-                    \node [anchor=west] at (.1,.65) {C++};
+                    \node [anchor=west] at (.1,.65) {Angular};
                     \draw [fill=gray] (0,0) rectangle (2.5,.35);
-                    \draw [fill={rgb:red,0;green,1;blue,0}] (0,0) rectangle (1.75,.35);
+                    \draw [fill={rgb:red,0;green,1;blue,0}] (0,0) rectangle (1.95,.35);
                 \end{tikzpicture}
                 \begin{tikzpicture}
-                    \node [anchor=west] at (.1,.65) {Java};
+                    \node [anchor=west] at (.1,.65) {Ionic Framework};
                     \draw [fill=gray] (0,0) rectangle (2.5,.35);
-                    \draw [fill={rgb:red,0;green,1;blue,0}] (0,0) rectangle (1.35,.35);
+                    \draw [fill={rgb:red,0;green,1;blue,0}] (0,0) rectangle (1.95,.35);
                 \end{tikzpicture}
                 \begin{tikzpicture}
-                    \node [anchor=west] at (.1,.65) {C};
+                    \node [anchor=west] at (.1,.65) {React};
                     \draw [fill=gray] (0,0) rectangle (2.5,.35);
-                    \draw [fill={rgb:red,0;green,1;blue,0}] (0,0) rectangle (1.35,.35);
+                    \draw [fill={rgb:red,0;green,1;blue,0}] (0,0) rectangle (1.5,.35);
                 \end{tikzpicture}
                 \begin{tikzpicture}
-                    \node [anchor=west] at (.1,.65) {JavaScript};
+                    \node [anchor=west] at (.1,.65) {Php};
                     \draw [fill=gray] (0,0) rectangle (2.5,.35);
-                    \draw [fill={rgb:red,0;green,1;blue,0}] (0,0) rectangle (1.15,.35);
-                \end{tikzpicture}
-                \begin{tikzpicture}
-                    \node [anchor=west] at (.1,.65) {Python};
-                    \draw [fill=gray] (0,0) rectangle (2.5,.35);
-                    \draw [fill={rgb:red,0;green,1;blue,0}] (0,0) rectangle (1,.35);
+                    \draw [fill={rgb:red,0;green,1;blue,0}] (0,0) rectangle (1.2,.35);
                 \end{tikzpicture}
             
             \item[]
@@ -160,10 +146,17 @@
                 \end{tikzpicture}
             
         \end{itemize}
+        \end{multicols}
     
     % Hobbies and Interests Section
     \section*{Hobbies and Interests}
+        \begin{multicols}{2}
         \begin{itemize}
-            \item \footnotesize Listening to music (heavy metal), Reading (science-fiction novels), Playing Strategy Games.
+            \item Listening to music;
+            \item Science Fiction;
+            \item Strategy Games;
+            \item Politics.
         \end{itemize}
+        \end{multicols}
+        \end{multicols}
 \end{document}
